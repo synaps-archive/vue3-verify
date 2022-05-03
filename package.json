@@ -1,0 +1,70 @@
+{
+  "name": "@synaps-io/vue3-verify",
+  "version": "0.1.0",
+  "description": "Synaps Vue SDK",
+  "author": "Synaps",
+  "license": "Apache 2.0",
+  "repository": "synaps-io/vue3-verify",
+  "main": "dist/vue3-verify.umd.js",
+  "module": "dist/vue3-verify.esm.js",
+  "unpkg": "dist/vue3-verify.umd.min.js",
+  "browser": {
+    "./sfc": "src/vue3-verify.vue"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-demi-switch 3 && vue-cli-service build --target lib src/components/SynapsVerify.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "core-js": "^3.8.3",
+    "vue": "^2.0.0 || >=3.0.0",
+    "vue-demi": "^0.12.5"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue": "^2.6.4",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
