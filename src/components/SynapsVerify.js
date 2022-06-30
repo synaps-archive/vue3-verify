@@ -68,7 +68,7 @@ export default defineComponent({
           "min-width": "400px",
           "min-height": "687px",
         },
-        allow: "microphone; camera; midi; encrypted-media;",
+        allow: "microphone; camera; midi; encrypted-media; usb; ethereum",
         allowfullscreen: "true",
         frameBorder: "none",
       });
