@@ -1,11 +1,4 @@
-import {
-  onMounted,
-  onUnmounted,
-  h,
-  ref,
-  computed,
-  defineComponent,
-} from "vue-demi";
+import { onMounted, onUnmounted, h, computed, defineComponent } from "vue-demi";
 const serviceUrl = {
   individual: "https://verify.synaps.io",
   corporate: "https://verify-v3.synaps.io",
@@ -34,21 +27,11 @@ export default defineComponent({
     tier: {
       type: Number,
     },
-    withCloseButton: {
-      type: Boolean,
-    },
   },
-  setup({ sessionId, service, color, lang, tier, withCloseButton }, { emit }) {
-    const iframe = ref(null);
+  setup({ sessionId, service, color, lang, tier }, { emit }) {
     const listernerMessage = ({ data }) => {
       if (data.type === "ready") {
         emit(data.type);
-        if (withCloseButton) {
-          iframe.value.contentWindow.postMessage(
-            { type: "synaps_finish_listened" },
-            "*"
-          );
-        }
       } else if (data.type === "finish") {
         emit(data.type);
       }
@@ -81,7 +64,6 @@ export default defineComponent({
     return () =>
       h("iframe", {
         src: url.value,
-        ref: iframe,
         style: {
           "min-width": "400px",
           "min-height": "687px",
