@@ -3,6 +3,7 @@
     <synaps-verify
       sessionId="ddeb8f1d-fd15858a-0aabddcb-ed9763de"
       service="individual"
+      :withFinishButton="true"
       @ready="print('ready')"
       @finish="print('finish')"
     />
