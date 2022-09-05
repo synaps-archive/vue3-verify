@@ -1,12 +1,11 @@
 {
   "name": "@synaps-io/vue3-verify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Synaps Vue SDK",
   "author": "Synaps",
   "license": "Apache 2.0",
   "repository": "synaps-io/vue3-verify",
   "main": "dist/vue3-verify.umd.js",
-  "module": "dist/vue3-verify.esm.js",
   "unpkg": "dist/vue3-verify.umd.min.js",
   "browser": {
     "./sfc": "src/vue3-verify.vue"
