@@ -27,8 +27,11 @@ export default defineComponent({
     tier: {
       type: Number,
     },
+    withFinishButton: {
+      type: Boolean,
+    },
   },
-  setup({ sessionId, service, color, lang, tier }, { emit }) {
+  setup({ sessionId, service, color, lang, tier, withFinishButton }, { emit }) {
     const listernerMessage = ({ data }) => {
       if (data.type === "ready") {
         emit(data.type);
@@ -51,6 +54,7 @@ export default defineComponent({
         secondary: color ? color.secondary : undefined,
         lang: lang ? lang : "en",
         tier: tier ? tier : undefined,
+        with_finish_button: withFinishButton,
       };
       return `${serviceUrl[service]}?${Object.keys(params)
         .reduce((acc, key) => {

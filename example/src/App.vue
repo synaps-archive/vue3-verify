@@ -4,6 +4,7 @@
       sessionId="f3243476-cec44c4a-5565ccd6-e7e9622d"
       :color="{ primary: '212b39', secondary: 'ffffff' }"
       lang="en"
+      :withFinishButton="true"
       service="individual"
       @ready="print('ready')"
       @finish="print('finish')"
